@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+  </head>
+  <body>
+    <script type="module">
+      import init, { setup } from './pkg/wasm_hello_world.js';
+
+      async function run() {
+        await init();
+        await setup(8);
+        console.log("All workers should have been terminated by now.");
+      }
+      run();
+    </script>
+  </body>
+<html>

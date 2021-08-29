@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+  </head>
+  <body>
+    <script type="module">
+      import init, { greet } from './pkg/wasm_hello_world.js';
+
+      async function run() {
+        await init();
+
+        greet("World");
+      }
+      run();
+    </script>
+  </body>
+<html>

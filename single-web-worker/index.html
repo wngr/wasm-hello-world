@@ -1,0 +1,11 @@
+<html>
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+  </head>
+  <body>
+    <script type = "module">
+      let worker = new Worker("./worker.js", { type: "module" });
+      worker.postMessage("World!");
+    </script>
+  </body>
+<html>
