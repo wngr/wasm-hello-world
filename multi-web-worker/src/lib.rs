@@ -20,7 +20,7 @@ pub fn setup(n: usize) -> Promise {
     for i in 0..n {
         log(&*format!("Starting worker {}", i));
         opts.name(&*i.to_string());
-        let worker = Worker::new_with_options("http://localhost:8080/worker.js", &opts).unwrap();
+        let worker = Worker::new_with_options("./worker.js", &opts).unwrap();
         let arr = js_sys::Array::new();
         arr.push(&wasm_bindgen::module());
         arr.push(&wasm_bindgen::memory());
